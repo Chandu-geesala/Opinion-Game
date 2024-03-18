@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Quicksand&amp;display=swap'>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            background-color: #e6f7ff; /* Dark blue background color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .title {
+            font-size: 28px;
+            color: #fff; /* White text color */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control-lg {
+            height: 50px;
+            width: 100%; /* Set input width to 100% */
+            max-width: 400px; /* Set maximum width */
+            margin: 0 auto; /* Center the input */
+        }
+
+        .message textarea {
+            height: 120px;
+            width: 100%; /* Set textarea width to 100% */
+            max-width: 400px; /* Set maximum width */
+            margin: 0 auto; /* Center the textarea */
+        }
+
+        .btn-primary {
+            padding: 15px 30px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center">
+        <form action="opinion.php" method="post">
+            <h1 class="title text-center mb-4">Give Your Opinion Anonymously</h1>
+
+            <!-- Name -->
+            <div class="form-group position-relative">
+                <label for="formName" class="d-block">
+                    <i class="icon" data-feather="user"></i>
+                </label>
+                <input name="To" type="text" id="formName" class="form-control form-control-lg thick" placeholder="To" required>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group message">
+                <textarea name="Opinion" id="formMessage" class="form-control form-control-lg" rows="7" placeholder="Opinion" required></textarea>
+            </div>
+
+            <!-- Submit btn -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary" tabIndex="-1">Send Opinion</button>
+            </div>
+        </form>
+    </div>
+
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+    <script src='https://unpkg.com/feather-icons'></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
